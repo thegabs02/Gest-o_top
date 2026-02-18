@@ -1,50 +1,73 @@
+@font-face {
+    font-family: "Menlo";
+    src: url(fontes/Menlo-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 header{
-    border-color: black;
-    border: 2px solid;
-    grid-column: 1 / 3;
+    grid-column: 1 / 2;
+    font-family: "Serif bold";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
 }
 body{
     display: grid;
     grid-template-rows: 100px 1fr 20px;
     grid-template-columns: 1fr;
     margin: 0;
+    background-image: radial-gradient(rgb(1, 1, 90), black);
     height: 100vh;
+    background-attachment: fixed;
 }
 h1{
     text-align: center;
+    color: rgb(255, 255, 255);
+    margin-top: 400px;
 }
 main{
     grid-column: 1/3;
     display: flex;
     align-items: center;
     justify-content: center;
-   
     width: 100%;
 
+    
 }
 article{
-    border: 2px solid;
     display: flex;
     align-items: center;
     flex-direction: column;
+    border-radius: 20px;
     
-    height: 500px;
-    width: 90%;
-
+    height: 100%;
+    width: 100%;
+    justify-content: center;
 }
 
 #medida{
     width: 100%;
-    border: 2px solid;
     border-top: 0cap;
+    font-family: "Serif bold";
     text-align: center;
-    margin: 0;
+    text-transform: uppercase;
+    overflow: hidden
 
+    
+}
+h2{
+    color: rgb(185, 185, 185);
 }
 #serv{
     width: 100%;
-    border: 2px solid;
+    text-align:center;
+     font-family: serif bold;
     text-align: center;
+    
+    text-transform: uppercase;
 }
 #inp1, #inp2{
     text-align: center;
@@ -59,6 +82,8 @@ article{
     align-items: flex-start;
     gap: 10px;
     justify-content: center;
+        color: rgb(228, 228, 228);
+
 }
 #calc1, #calc2{
     display: flex;
@@ -108,26 +133,38 @@ details{
     text-transform: capitalize;
     white-space: nowrap;
     overflow: scroll;
-  
+    color: white;
+    border-radius: 10px;
+    font-family: "Menlo";
+    
 }
 summary{
     list-style: none;
 }
 #portas{
-    border: 2px solid;
+    border: 3px solid;
+    padding: 10px;
 }
 #janela{
-    border: 2px solid;
+    border: 3px solid;
+    
+    padding: 10px;
 
 }
 #fechamento{
-    border: 2px solid;
+     border: 3px solid;
+    
+    padding: 10px;
 }
 #cobertura{
-    border: 2px solid;
+     border: 3px solid;
+    
+    padding: 10px;
 }
 #troca{
-    border: 2px solid;
+    border: 3px solid;
+    
+    padding: 10px;
     text-align: center;
 }
 
@@ -138,6 +175,7 @@ footer{
     justify-content: center;
     grid-row: 3/4;
     grid-column: 1/3;
+    color: white;
 }
 
    @media (max-width: 768px){
@@ -148,8 +186,9 @@ footer{
         justify-content: center;
     }
     h1{
-        font-size: medium;
         text-align: center;
+        margin-top: 200px;
+        font-size: 40px;
     }
     body {
         grid-template-rows: 80px 1fr 30px;
