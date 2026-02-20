@@ -16,22 +16,24 @@ header{
 }
 body{
     display: grid;
-    grid-template-rows: 100px 1fr 20px;
-    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr; 
     margin: 0;
     background-image: radial-gradient(rgb(1, 1, 90), black);
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     background-attachment: fixed;
 }
 h1{
     text-align: center;
     color: rgb(255, 255, 255);
-    margin-top: 400px;
+    
 }
 main{
     grid-column: 1/3;
+    grid-row: 2;
     display: flex;
-    align-items: center;
+    
     justify-content: center;
     width: 100%;
 
@@ -43,9 +45,9 @@ article{
     flex-direction: column;
     border-radius: 20px;
     
-    height: 100%;
+    margin-top: 200px;
     width: 100%;
-    justify-content: center;
+  
 }
 
 #medida{
@@ -90,33 +92,67 @@ h2{
     flex-direction: column;
     align-items: center;
     width: 100%;
+    
 }
 
 #tot{
-    width: 25%;
-    height: 30px;
-    margin-top: 10px;
     text-align: center;
+    color: white;
+    font-size: xx-large;
+    border: 2px solid;
+    padding: 2px 10px 5px 10px;
+    width: 5%;
     border-radius: 10px;
 
+
+}
+
+
+
+#tot_serv{
+
+ text-align: center;
+    color: white;
+    font-size: xx-large;
+    border: 2px solid;
+    padding: 2px 10px 5px 10px;
+    width: fit-content;
+    border-radius: 10px;
+}
+#totais{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 #ops{
     font-size: larger;
     display: flex;
-    width: 80%;
+    width: 100%;
     align-items: center;
     justify-content: center;
 }
 nav{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     gap: 20px;
-    margin: auto 20px auto 20px;
+    margin: 0 20px;
     padding: 10px;
-    align-items: flex-start;
+    align-items: start;
 }
+
+
 li{
     list-style: none;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    justify-self: center;
+    gap: 6px;
+    padding: 0;
+    width: 100%;
 }
 ul{
     display: flex;
@@ -125,6 +161,7 @@ ul{
     align-items: center;
     text-align: center;
     justify-self: center;
+    gap: 10px;
     padding: 0;
 }
 details{
@@ -132,10 +169,11 @@ details{
     width: 300px;
     text-transform: capitalize;
     white-space: nowrap;
-    overflow: scroll;
     color: white;
     border-radius: 10px;
     font-family: "Menlo";
+
+
     
 }
 summary{
@@ -151,15 +189,40 @@ summary{
     padding: 10px;
 
 }
+button{
+    font-family: "Menlo";
+    font-size: large;
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(90deg, rgb(0, 0, 104), rgb(0, 9, 88));
+    width: 90%;
+
+    white-space: normal;
+    word-wrap: break-word;
+    padding: 10px;
+    border-radius: 20px;
+    text-transform: capitalize;
+}
 #fechamento{
-     border: 3px solid;
+    border: 3px solid;
+    padding: 10px;
+}
+#fec{
+    display: flex;
+    gap: 10px;
+}
+
+#cobertura{
+    border: 3px solid;
     
     padding: 10px;
 }
-#cobertura{
-     border: 3px solid;
-    
-    padding: 10px;
+
+#ret{
+    white-space: nowrap;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #troca{
     border: 3px solid;
@@ -167,15 +230,29 @@ summary{
     padding: 10px;
     text-align: center;
 }
+#fix{
+    white-space: nowrap;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.escondido{
+    display: none;
+}
+#escon{
+    width: 80%;
+}
 
 footer{
     border: 1px solid;
     display: flex;
     align-items: center;
     justify-content: center;
-    grid-row: 3/4;
-    grid-column: 1/3;
     color: white;
+    grid-row: 3/4;
+   
+
 }
 
    @media (max-width: 768px){

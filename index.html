@@ -1,78 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-
     <title>Gestão_top</title>
 </head>
 <body>
     <header>
         <h1>Orçamentos Top Coberturas</h1>
     </header>
+
     <main>
         <article>
+
             <h2 id="medida">medidas</h2>
+
             <div id="calc">
                 <div id="calc1">
-                    <input type="number" placeholder="area" id="inp1">
-                    <label for="inp1" id="lab1">
-                        comprimento(m)
-                    </label>
+                    <input type="number" placeholder="comprimento" id="inp1">
+                    <label for="inp1">comprimento (m)</label>
                 </div>
+
                 x
+
                 <div id="calc2">
-                    <input type="number" placeholder="area" id="inp2">
-                    <label for="inp2" id="lab2">
-                        largura(m)
-                    </label>
+                    <input type="number" placeholder="largura" id="inp2">
+                    <label for="inp2">largura (m)</label>
                 </div>
             </div>
-            <br>
-            <input type="text" placeholder="total" id="tot">
+
+            <div id="totais">
+                <p id="tot">0 m²</p>
+                <p id="tot_serv">R$ 0,00</p>
+            </div>
+
             <h2 id="serv">serviço</h2>
+
             <div id="ops">
                 <nav>
+
                     <details id="janela">
-                        <summary>
-                            janelas
-                        </summary>
+                        <summary>janelas</summary>
                         <input type="text" class="inps3">
                         <ul class="jan">
-                            <li>vidro temperado</li>
-                            <li>vidro laminado</li>
+                            <li>
+                                <button type="button" id="jane">
+                                    vidro temperado incolor 4 folhas
+                                </button>
+                            </li>
                         </ul>
                     </details>
 
                     <details id="portas">
-                        <summary>
-                            portas
-                        </summary>
+                        <summary>portas</summary>
                         <input type="text" class="inps3">
                         <ul class="portas">
-                            <li>vidros temperados</li>
-                            <li>vidro laminado</li>
+                            <li>
+                                <button>vidro temperado 8mm</button>
+                            </li>
                         </ul>
                     </details>
+
                     <details id="fechamento">
                         <summary>fechamento</summary>
                         <input type="text" class="inps3">
                         <ul class="fec">
-                            <li>vidro temperado</li>
-                            <li>vidro laminado</li>
+                            <li><button class="fecha">policarbonato alveolar 10mm</button></li>
+                            <li><button class="fecha">policarbonato compacto 3mm</button></li>
+                            <li><button class="fecha">vidro temperado 8mm</button></li>
                         </ul>
                     </details>
+
                     <details id="cobertura">
                         <summary>coberturas</summary>
                         <input type="text" class="inps3">
                         <ul class="cob">
-                            <li>vidro temperado</li>
-                            <li>vidro laminado</li>
+
+                            <li>
+                                <button id="fix">fixa</button>
+                            </li>
+
+                            <li id="esco" class="escondido">
+                                <button class="servico" data-valor="512">telha termo acústico uma face</button>
+                                <button class="servico" data-valor="524">telha termo acústico duas faces</button>
+                                <button class="servico" data-valor="560">telha termo forro uma face</button>
+                                <button class="servico" data-valor="580">telha termo forro duas faces</button>
+                                <button class="servico" data-valor="650">telha termo forro amadeirado embaixo</button>
+                                <button class="servico" data-valor="370">telha comum natural</button>
+                                <button class="servico" data-valor="386">telha comum uma face</button>
+                                <button class="servico" data-valor="394">telha comum duas faces</button>
+                                <button class="servico" data-valor="459">policarbonato alveolar</button>
+                                <button class="servico" data-valor="663">policarbonato compacto</button>
+                                <button class="servico" data-valor="810">vidro laminado incolor 6mm</button>
+                                <button class="servico" data-valor="870">vidro laminado incolor 8mm</button>
+                                <button class="servico" data-valor="1200">vidro laminado refletivo 8mm</button>
+                                <button class="servico" data-valor="918">vidro temperado fumê com película 8mm</button>
+                            </li>
+
+                            <li>
+                                <button id="ret">retráteis</button>
+                            </li>
+
                         </ul>
                     </details>
+
                     <details id="troca">
-                        <summary id="est">troca de chapa</summary>
+                        <summary>troca de chapa</summary>
                         <input type="text" class="inps3">
                         <ul class="tro">
                             <li>vidro temperado</li>
@@ -81,12 +115,14 @@
                     </details>
                 </nav>
             </div>
+
         </article>
     </main>
+
     <footer>
-        <p>
-            by gabs
-        </p>
+        <p>by gabs</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
