@@ -37,7 +37,7 @@ function menu_cob_ret(){
 btn_ret.addEventListener("click", menu_cob_ret);
 let valor_tot = 0;
 
-document.querySelectorAll(".servico").forEach(element => {
+document.querySelectorAll("#opcoes .servico").forEach(element => {
     element.addEventListener("click", () => {
         calculo_serv(Number(element.dataset.valor));
     });
@@ -56,9 +56,10 @@ function calculo_serv(valor_m2) {
 let  busca = document.getElementById("busca");
 
 function buscar_item(){
-    let itens = document.getElementsByClassName("servico");
+    
+    let itens = document.querySelectorAll("#opcoes .servico");
     let item_map = []; 
-
+console.log(itens.length);
     for(let item of itens){
         item_map.push({
             elemento: item,
@@ -66,24 +67,42 @@ function buscar_item(){
         });
     }   
     let texto_busca = busca.value.toLowerCase()
-    let resultados = item_map.filter(item => item.texto.toLowerCase().includes(texto_busca)).slice(0,5);
+    let resultados = item_map.filter(item => item.texto.toLowerCase().includes(texto_busca));
 
-    console.log(resultados);
-    let resultado;
-    let ul_busca = document.getElementById("ul_busca");
-    ul_busca.innerHTML = "";
-    for(resultado of resultados)
-    {
-        let clone = resultado.elemento.cloneNode(true);
-        clone.addEventListener("click", () =>{
-            calculo_serv(Number(clone.dataset.valor));
-            ul_busca = innerHTML = "";
-            busca.value =clone.textContent.trim();
-        });
-        ul_busca.appendChild(clone);
-        
-    }
     
+    let resultado;
+    
+    let ul_busca = document.getElementById("ul_busca");
+   
+    ul_busca.innerHTML = "";
+
+for (let resultado of resultados) {
+
+    const li = document.createElement("li");
+
+    const botao = document.createElement("button");
+    botao.classList.add("servico");
+    botao.dataset.valor = resultado.elemento.dataset.valor;
+    botao.textContent = resultado.texto;
+
+    botao.addEventListener("click", () => {
+        calculo_serv(Number(botao.dataset.valor));
+        ul_busca.innerHTML = "";
+        busca.value = botao.textContent;
+    });
+
+    li.appendChild(botao);
+    ul_busca.appendChild(li);
+}
+    console.log("ta indo1");
+    if(busca.value.trim() === ""){
+      ul_busca.style.display = "none";
+      console.log("ta indo2");
+    }
+    else{
+      ul_busca.style.display = ("flex");
+      
+    }
 }
 
 busca.addEventListener("input", buscar_item);
