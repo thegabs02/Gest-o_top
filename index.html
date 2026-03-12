@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Gestão_top</title>
+</head>
+<body>
+    <header>
+        <h1>Orçamentos Top Coberturas</h1>
+        <hr>
+    </header>
+
+    <main>
+        <article id="orçamento">
+
+            <h2 id="medida">medidas</h2>
+
+            <div id="calc">
+                <div id="calc1">
+                    <input type="number" placeholder="comprimento" id="inp1">
+                    <label for="inp1">comprimento (m)</label>
+                </div>
+
+                x
+
+                <div id="calc2">
+                    <input type="number" placeholder="largura" id="inp2">
+                    <label for="inp2">largura (m)</label>
+                </div>
+            </div>
+
+            <div id="totais">
+                <p id="tot">0 m²</p>
+                <p id="tot_serv">R$ 0,00</p>
+            </div>
+
+            <h2 id="serv">serviço</h2>
+            
+
+            <div id="ops">
+                <nav>
+                    <div id="div_busca">
+                        <input type="text" placeholder="Buscar" id="busca" autocomplete="off">
+                        <ul id="ul_busca"></ul>
+                    </div>
+                  <div id = "opcoes">
+                    <details id="janela">
+                        <summary>janelas</summary>
+                        
+                        <ul class="jan">
+                            <li>
+                                <button class="servico" data-valor="510" id="jane">
+                                    janela vidro temperado incolor 4 folhas
+                                </button>
+                            </li>
+                        </ul>
+                    </details>
+
+                    <details id="portas">
+                        <summary>portas</summary>
+                        
+                        <ul class="portas">
+                            <li>
+                                <button class="servico" data-valor="580">porta vidro temperado 8mm</button>
+                            </li>
+                        </ul>
+                    </details>
+
+                    <details id="fechamento">
+                        <summary>fechamento</summary>
+                        <ul class="fec">
+                            <li><button class="servico" data-valor="350">fechamento policarbonato alveolar 10mm</button></li>
+                            <li><button class="servico" data-valor="450">fechamento policarbonato compacto 3mm</button></li>
+                            <li><button class="servico" data-valor="550">fechamento vidro temperado 8mm</button></li>
+                        </ul>
+                    </details>
+
+                    <details id="cobertura">
+                        <summary>coberturas</summary>
+                        <ul class="cob">
+
+                            <li>
+                                <button id="fix">fixa</button>
+                            </li>
+
+                            <li id="esco" class="escondido"> <!--mudar pra ul e li-->
+                                <button class="servico" data-valor="512">telha termo acústico uma face-fix</button>
+                                <button class="servico" data-valor="524">telha termo acústico duas faces-fix</button>
+                                <button class="servico" data-valor="560">telha termo forro uma face-fix</button>
+                                <button class="servico" data-valor="580">telha termo forro duas faces-fix</button>
+                                <button class="servico" data-valor="650">telha termo forro amadeirado embaixo-fix</button>
+                                <button class="servico" data-valor="370">telha comum natural-fix</button>
+                                <button class="servico" data-valor="386">telha comum uma face-fix</button>
+                                <button class="servico" data-valor="394">telha comum duas faces-fix</button>
+                                <button class="servico" data-valor="459">cobertura policarbonato alveolar-fix</button>
+                                <button class="servico" data-valor="663">cobertura policarbonato compacto-fix</button>
+                                <button class="servico" data-valor="810">cobertura vidro laminado incolor 6mm-fix</button>
+                                <button class="servico" data-valor="870">cobertura vidro laminado incolor 8mm-fix</button>
+                                <button class="servico" data-valor="1200">cobertura vidro laminado refletivo 8mm-fix</button>
+                                <button class="servico" data-valor="918">cobertura vidro temperado fumê com película 8mm-fix</button>
+                            </li>
+
+                            <li>
+                                <button id="ret">retráteis</button>
+                            </li>
+                            <li id="esco_ret" class="escondido_ret">
+                                <button class="servico" data-valor="670">telha termo acústico uma face-ret</button>
+                                <button class="servico" data-valor="700">telha termo acústico duas faces-ret</button>
+                                <button class="servico" data-valor="740">telha termo forro uma face-ret</button>
+                                <button class="servico" data-valor="780">telha termo forro duas faces-ret</button>
+                                <button class="servico" data-valor="816">telha termo forro amadeirado embaixo-ret</button>
+                                <button class="servico" data-valor="561">cobertura policarbonato alveolar-ret</button>
+                                <button class="servico" data-valor="867">cobertura policarbonato compacto-ret</button>
+                                <button class="servico" data-valor="1040">cobertura policarbonato compacto dois lados moveis-ret</button>
+                                <button class="servico" data-valor="1055">cobertura vidro laminado incolor 6mm-ret</button>
+                                <button class="servico" data-valor="1115">coberturavidro laminado incolor 8mm-ret</button>
+                                <button class="servico" data-valor="1138">cobertura vidro laminado incolor 10mm-ret</button>
+                            </li>
+
+
+                        </ul>
+                    </details>
+
+                    <details id="troca">
+                        <summary>manejo de agua</summary>
+                        <ul class="tro">
+                            <li><button id="cer" class="servico" data-valor="150">calhas e rufos</button></li>
+                        </ul>
+                    </details>
+                  </div>
+                </nav>
+            </div>
+        </article>
+        <article id="cliente">
+            <h2>clientes</h2>
+        </article>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
