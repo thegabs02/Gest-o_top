@@ -52,6 +52,7 @@ article, #orçamento{
     border: 5px solid rgb(240,240,240);
     flex: 1;
     margin-top: 40px;
+    height: 700px;
 }
 
 #cliente{
@@ -191,14 +192,15 @@ ul{
     position: absolute;
     display: flex;
     top: 60%;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     flex-direction: column;
     gap: 10px;
-    max-width: 100%;
+    width: 90%;
     overflow-y: auto;
     border-radius: 20px;
     backdrop-filter: blur(10px);
-    height: 300px;
+    height: 270px;
     z-index: 999;
 }
 
@@ -360,10 +362,11 @@ button{
         flex-direction: column;
     }
 
-    #ul_busca{
-        top: 100%;
-        left: 0;
-        max-height: 300px;
+    #ul_busca:has(li){
+        top: 70%;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 300px;
         max-width: 100%;
     }
 
