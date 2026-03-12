@@ -14,15 +14,18 @@ header{
    
 }
 body{
-    display: grid;
+        display: grid;
+
     grid-template-rows: auto auto auto;
+
     grid-template-columns: 1fr; 
+
     margin: 0;
     background-image: radial-gradient(rgb(1, 1, 90), black);
     min-height: 100vh;
+
     background-attachment: fixed;
     height: auto;
-    overflow: hidden;
 }
 h1{
     text-align: center;
@@ -49,18 +52,17 @@ article, #orçamento{
     border-radius: 20px;
     width: 100%;
     margin-top: 40px;
-
+    align-items: center;
     max-width: 1500px;
+
     border: 5px solid;
     border-color: rgb(240, 240, 240);
     flex: 1;
-    height: 80vh;
 
 }
-article, #cliente{
+ #cliente{
     flex-direction: column;
     display: flex;
-    align-items: center;
     max-width: 500px;
     
     
@@ -153,6 +155,7 @@ h2{
 #ops{
     font-size: larger;
     display: flex;
+
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -162,15 +165,13 @@ h2{
    display: flex;
    gap: 10px;
    align-items: flex-start;
-   
    justify-content: center;
 
 }
 nav{
     display: flex;
     align-items: center;    
-    flex-direction: column;                                              ;
-
+    flex-direction: column;
     margin: 0 20px;
     padding: 10px;
     align-items: center;
@@ -199,7 +200,9 @@ ul{
     gap: 10px;
 
 }
-#ul_busca{
+#ul_busca:has(li){
+    border: 2px white solid;
+    background-color: rgba(255, 255, 255, 0.103);
     position: absolute;
     display: flex;
     top: 60%;
@@ -207,27 +210,21 @@ ul{
     flex-direction: column;
     gap: 10px;
     max-width: 100%;
-    background-color: rgba(255, 255, 255, 0.103);
+    
     overflow-y: auto;
     border-radius: 20px;
     justify-content: flex-start;
     backdrop-filter: blur(10px);
     height: 300px;
-        z-index: 999;
-
-    
-
-}
-#ul_busca:has(li){
-    border: 2px white solid;
+     z-index: 999;
 }
 
 
 #div_busca{
-    position: relative
-    ;
+    position: relative;
     display: flex;
     justify-content: center;
+    
 }
 details{
     text-align: center;
@@ -332,31 +329,57 @@ button{
         margin-left: 0;
         justify-content: center;
         padding: 0 15px;
+        height: auto;
+        
+    }
+    h1{
+        font-size: x-large;
     }
     body{
         width: 100%;
+        display: flex;
+        flex-direction: column;
         height: 100%;
+        
     }
-    article{
+    article, #orçamento{
         margin-top: 40px;
         width: 90%;
         max-width: 100%;
+        height: auto;
+        border:none;
     }
 
     #busca{
         width: 100%;
         font-size: 16px;
+        justify-self: center;
     }
-
-    details{
+    #div_busca{
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 100%;
+        margin: 0;
+    }
+    #ops{
+        display: flex;
+        flex-direction: column;
+    }
+    #opcoes{
+        flex-direction: column;
+    }
+    details{
+        display: flex;
+        max-width: 100%;
+        flex-direction: column;
     }
 
     #ul_busca{
         top: 100%;
         left: 0;
-        width: 100%;
         max-height: 300px;
+        max-width: 100%;
     }
 
     #opcoes{
@@ -370,6 +393,9 @@ button{
 
     button{
         width: 100%;
+    }
+    #cliente{
+        display: none;
     }
 
 }
