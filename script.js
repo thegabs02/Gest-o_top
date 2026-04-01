@@ -31,7 +31,7 @@ function menu_cob_fix() {
 btn.addEventListener("click", menu_cob_fix);
 
 function menu_cob_ret(){
-    esco_ret.classList.toggle("escondido_ret");
+    esco_ret.classList.toggle("escondido");
 }
 
 btn_ret.addEventListener("click", menu_cob_ret);
@@ -106,3 +106,8 @@ for (let resultado of resultados) {
 }
 
 busca.addEventListener("input", buscar_item);
+
+const img = document.getElementById("img_editar")
+function editar (){
+    
+}
