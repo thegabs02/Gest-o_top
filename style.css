@@ -1,427 +1,218 @@
-@font-face {
-    font-family: "Menlo";
-    src: url(fontes/Menlo-Regular.ttf);
-    font-weight: normal;
-    font-style: normal;
+/* Importando uma fonte moderna */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+:root {
+    --bg-dark: #121619;
+    --bg-card: #1e2529;
+    --accent: #3b82f6;
+    --accent-hover: #2563eb;
+    --text-main: #f3f4f6;
+    --text-muted: #9ca3af;
+    --border: #374151;
+    --radius: 12px;
 }
 
-*{
+* {
     box-sizing: border-box;
 }
-/* Para Chrome, Safari, Edge e Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
 
-/* Para Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
-  appearance: textfield;
-}
-#adicionar_input{
-    background-color: transparent;
-    text-align: center;
-    width: 90%;
-    margin-bottom: 10px;
-    color: white;
-    border-radius: 20px 0px 20px 0px;
-    font-size: x-large;
-}
-
-header{
-    font-family: "Serif bold";
-}
-
-body{
+body {
     display: grid;
     grid-template-rows: auto auto auto;
     grid-template-columns: 1fr; 
     margin: 0;
-    background-color:#2E383E;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
 }
 
-h1{
+h1 {
     text-align: center;
-    color: #e0e0e0;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 20px 0;
+    margin: 0;
 }
 
-hr{
-    color: rgb(0, 0, 0);
+/* --- Seções Principais --- */
+
+article, #orçamento {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    padding: 25px;
+    margin-top: 20px;
+    height: auto; 
+    min-height: 500px;
+}
+#cliente{
+    width: 60%;
+    height: auto;
 }
 
-main{
+main {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    margin-left: 100px;
     width: 100%;
-    gap: 10px;
-}
-
-article, #orçamento{
-    grid-column: 1/3;
-    grid-row: 3;
-    display: flex;
-    flex-direction: column;
-    border-radius: 20px;
-    align-items: center;
-    max-width: 1500px;
-    border: 5px solid #67696b;
-    flex: 1;
-    margin-top: 40px;
-    height: 700px;
-}
-
-#cliente{
-    max-width: 500px;
-    
-}
-#ul_cliente{
-    width: 100%;
-}
-#li_cliente{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-}
-img{
-    color: white;
-}
-#p_cli{
-    color: white;
-    font-size: 20px;
-    
-    
-}
-#medida{
-    width: 100%;
-    border-top: 0cap;
-    font-family: "Serif bold";
-    text-align: center;
-    text-transform: uppercase;
-}
-
-h2{
-    color: rgb(185, 185, 185);
-    text-align: center;
-    text-transform: uppercase;
-}
-
-#serv{
-    width: 100%;
-    text-align:center;
-    font-family: serif bold;
-    text-transform: uppercase;
-}
-
-#inp1, #inp2{
-    text-align: center;
-    width: 100%;
-    height: 30px;
-    border-radius: 10px;
-    font-size: medium;
-    background-color: transparent;
-    color: white;
-    border-width: 3px;
-}
-
-#calc{
-    margin-top: 10px;
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    justify-content: center;
-    color: rgb(228, 228, 228);
-}
-
-#calc1, #calc2{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-
-#tot{
-    text-align: center;
-    color: white;
-    font-size: xx-large;
-    border: 2px solid;
-    padding: 2px 10px 5px 10px;
-    border-radius: 10px;
-    min-width: 5%;
-}
-
-#tot_serv{
-    text-align: center;
-    color: white;
-    font-size: xx-large;
-    border: 2px solid;
-    padding: 2px 10px 5px 10px;
-    width: fit-content;
-    border-radius: 10px;
-}
-
-#totais{
-    width: 100%;
-    display: flex;
-    justify-content: center;
     gap: 20px;
+    padding: 20px;
 }
 
+/* --- Inputs e Botões --- */
+
+#busca, #adicionar_input, #inp1, #inp2 {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+
+    color: white;
+    padding: 12px;
+    transition: all 0.3s ease;
+}
 #busca{
-    text-align: center;
-    background-color: transparent;
-    color: #ffffff;
-    height: 50px;
+    margin-bottom: 5px;
+
+}
+#div_busca{
     width: 100%;
-    border-radius: 20px;
-    font-size: larger;
-    margin: 20px;
-    font-style: oblique;
-    border-color: white;
-    border-width: 4px;
-
-}
-
-#ops{
-    font-size: larger;
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-}
-
-#opcoes{
-    display: flex;
-    gap: 10px;
-    align-items: flex-start;
-    justify-content: center;
-}
-
-nav{
-    display: flex;
-    align-items: center;    
-    flex-direction: column;
-    margin: 0 20px;
-    padding: 10px;
-}
-
-li{
-    list-style: none;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     padding: 0;
-    gap: 20px;
+    margin: 0;
+}
+nav{
+    padding: 0;
+    margin: 0;
     width: 100%;
 }
+#busca:focus, #inp1:focus, #inp2:focus {
+    outline: none;
+    border-color: var(--accent);
+    background: rgba(255, 255, 255, 0.1);
+}
 
+button {
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 20px 0px 20px 0px;
+    font-weight: 600;
+    padding: 12px;
+    width: 200px;
+    transition: transform 0.2s, background 0.3s;
+    cursor: pointer;
+    text-transform:capitalize ;
+    font-size: 16px;
+
+}
+
+button:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+}
+
+/* --- Detalhes do Orçamento --- */
+
+#totais {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#tot, #tot_serv {
+    background-color: #064e3b; /* Verde escuro elegante para preços */
+    color: #10b981; /* Texto verde neon suave */
+    font-weight: 700;
+    border: 1px solid #065f46;
+    padding: 15px 25px;
+    border-radius: 10px;
+}
+
+/* --- Dropdowns (Details) --- */
+
+details {
+    background: #2a3237;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    padding: 5px;
+    border: 1px solid var(--border);
+}
+
+summary {
+    cursor: pointer;
+    padding: 10px;
+    font-weight: 600;
+}
+
+/* --- Lista de Busca (Sugestões) --- */
+
+#ul_busca:has(li) {
+    background: rgba(30, 37, 41, 0.95);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--accent);
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    height: 400px;
+    overflow-y: auto;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+
+}
 ul{
     display: flex;
     flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+}
+li{
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
     justify-content: center;
     padding: 0;
-    gap: 10px;
-}
-#ul_busca{
-   margin: 0;
-}
-#ul_busca:has(li){
-    position: absolute;
-    top: 85%;
-    display: flex;
-    left: 0;
-    flex-direction: column;
-    width: 100%;
-    height: 270px;
-    background: rgba(255, 255, 255, 0.192); 
-    backdrop-filter: blur(10px);
-    overflow-y: auto;
-    z-index: 999;
-    align-items: stretch;
-    justify-content: flex-start;
-    border: 5px solid;
-    border-color:white ;
-    border-radius: 20px;
-}
+    margin: 0;
 
-#div_busca{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center
-}
-
-details{
-    text-align: center;
-    width: 240px;
-    text-transform: capitalize;
-    white-space: normal;
-    color: white;
-    border-radius: 10px;
-    font-family: "Menlo";
-    position: relative;
-    overflow: hidden;
-}
-
-details[open]{
-    max-height: 250px;
-    overflow-y: auto;
-}
-
-summary{
-    list-style: none;
-}
-
-#portas{
-    border: 3px solid;
-    padding: 10px;
-}
-
-#janela{
-    border: 3px solid;
-    padding: 10px;
-}
-
-button{
-    font-family: "Menlo";
-    font-size: large;
-    color: rgb(255, 255, 255);
-    background-color: #2E383E;
-    width: 90%;
-    white-space: normal;
-    word-wrap: break-word;
-    padding: 10px;
-    text-transform: capitalize;
-    border-radius: 20px 0px 20px 0px;
-
-}
-
-#fechamento{
-    border: 3px solid;
-    padding: 10px;
-}
-
-#fec{
-    display: flex;
-    gap: 10px;
-}
-
-#cobertura{
-    border: 3px solid;
-    padding: 10px;
-}
-
-#ret{
-    white-space: nowrap;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#troca{
-    border: 3px solid;
-    padding: 10px;
-    text-align: center;
-}
-
-#fix{
-    white-space: nowrap;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .escondido{
     display: none;
 }
 
-#escon{
-    width: 80%;
-}
+/* --- Ajustes Mobile --- */
 
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 0;
+    }
 
-
-
-
-/* MOBILE */
-
-@media (max-width: 768px){
-
-    main{
+    article, #orçamento, #cliente {
+        width: 100%;
+        border: 1px solid var(--border); /* No mobile a borda ajuda a separar */
         margin-left: 0;
-        justify-content: center;
-        padding: 0 15px;
-        height: auto;
     }
-
-    h1{
-        font-size: x-large;
-    }
-
-    body{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-    }
-
-    article, #orçamento{
-        margin-top: 40px;
-        width: 90%;
-        max-width: 100%;
-        height: auto;
-        border:none;
-    }
-
-    #busca{
-        font-size: 20px;
-    }
-
-    #div_busca{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        margin: 0;
-        position: relative;
-    }
-
-    #ops{
-        flex-direction: column;
-    }
-
-    #opcoes{
-        flex-direction: column;
-    }
-
-    details{
-        display: flex;
-        max-width: 100%;
-        flex-direction: column;
-    }
-
-    #ul_busca:has(li){
-        top: 85%;
-        left: 50%;
-        transform: translateX(-50%);
-        height: 300px;
-        max-width: 100%;
-    }
-
-    nav{
-        margin: 0;
-        width: 100%;
-        align-items: center;
-    }
-
-    button{
-        width: 100%;
-    }
-
-    #cliente{
-        display: none;
-    }
+    
+    
 }
