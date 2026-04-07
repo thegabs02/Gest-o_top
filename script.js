@@ -104,10 +104,19 @@ for (let resultado of resultados) {
       
     }
 }
-
 busca.addEventListener("input", buscar_item);
 
-const img = document.getElementById("img_editar")
-function editar (){
+async function enviarback(){
+    const salvar = document.getElementById("adicionar_input").value;
+    const resposta = await fetch('http://localhost:3000/salvar',{
+        //avisa q estamos enviando
+        method: 'POST',
+        //avisa o tipo doq estamos enviando
+        headers: {'Content-Type': 'application/json'},
+        //transforma variavel em elemento json
+        body: JSON.stringify({nome: salvar})
+    });
     
 }
+ 
+

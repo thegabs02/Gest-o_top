@@ -8,6 +8,27 @@
 *{
     box-sizing: border-box;
 }
+/* Para Chrome, Safari, Edge e Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Para Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+#adicionar_input{
+    background-color: transparent;
+    text-align: center;
+    width: 90%;
+    margin-bottom: 10px;
+    color: white;
+    border-radius: 20px 0px 20px 0px;
+    font-size: x-large;
+}
 
 header{
     font-family: "Serif bold";
@@ -18,15 +39,12 @@ body{
     grid-template-rows: auto auto auto;
     grid-template-columns: 1fr; 
     margin: 0;
-    background-image: radial-gradient(rgb(1, 1, 90), black);
-    min-height: 100vh;
-    background-attachment: fixed;
-    height: auto;
+    background-color:#2E383E;
 }
 
 h1{
     text-align: center;
-    color: rgb(0, 0, 0);
+    color: #e0e0e0;
 }
 
 hr{
@@ -49,7 +67,7 @@ article, #orçamento{
     border-radius: 20px;
     align-items: center;
     max-width: 1500px;
-    border: 5px solid rgb(240,240,240);
+    border: 5px solid #67696b;
     flex: 1;
     margin-top: 40px;
     height: 700px;
@@ -103,6 +121,9 @@ h2{
     height: 30px;
     border-radius: 10px;
     font-size: medium;
+    background-color: transparent;
+    color: white;
+    border-width: 3px;
 }
 
 #calc{
@@ -151,12 +172,15 @@ h2{
 #busca{
     text-align: center;
     background-color: transparent;
-    color: white;
+    color: #ffffff;
     height: 50px;
     width: 100%;
     border-radius: 20px;
     font-size: larger;
     margin: 20px;
+    font-style: oblique;
+    border-color: white;
+    border-width: 4px;
 
 }
 
@@ -264,14 +288,15 @@ summary{
 button{
     font-family: "Menlo";
     font-size: large;
-    color: rgb(255,255,255);
-    background-image: linear-gradient(90deg, rgb(0,0,104), rgb(0,9,88));
+    color: rgb(255, 255, 255);
+    background-color: #2E383E;
     width: 90%;
     white-space: normal;
     word-wrap: break-word;
     padding: 10px;
-    border-radius: 20px;
     text-transform: capitalize;
+    border-radius: 20px 0px 20px 0px;
+
 }
 
 #fechamento{
