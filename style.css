@@ -61,6 +61,10 @@ main {
     gap: 20px;
     padding: 20px;
 }
+#calc1, #calc2{
+    display: flex;
+    flex-direction: column;
+}
 
 /* --- Inputs e Botões --- */
 
@@ -207,12 +211,18 @@ li{
         align-items: flex-start;
         margin: 0;
     }
-
     article, #orçamento, #cliente {
         width: 100%;
         border: 1px solid var(--border); /* No mobile a borda ajuda a separar */
         margin-left: 0;
     }
-    
+
+    #adicionar_div{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    #adicionar_input, #adicionar_button{
+        width: 100px;
+    }
     
 }

@@ -24,7 +24,7 @@
                     <label for="inp1">comprimento (m)</label>
                 </div>
 
-                x
+                
 
                 <div id="calc2">
                     <input type="number" placeholder="largura" id="inp2">
@@ -140,13 +140,16 @@
         </article>
         <article id="cliente">
             <h2>clientes</h2>
+            <div id="adicionar_div">
+                <input type="text", placeholder="nome" id="adicionar_input">
+                <button onclick="enviarback()" id="adicionar_button">adicionar</button>
+            </div>
+            
             <ul id="ul_cliente">
                 <li id="li_cliente">
                    <p id="p_cli">joao gabriel | 01/12/2007 | 84996697401</p>
                 </li>
             </ul>
-            <input type="text", placeholder="nome" id="adicionar_input">
-            <button onclick="enviarback()" id="adicionar">adicionar</button>
         </article>
     </main>
     <script src="script.js"></script>
