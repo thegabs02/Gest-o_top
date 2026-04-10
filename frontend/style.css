@@ -213,8 +213,9 @@ li{
 .item_cliente{
     display: flex;
     flex-direction: row;
-    width: 500px;
     justify-content: flex-start;
+    width: 500px;
+
 }
 
 /* --- Ajustes Mobile --- */
@@ -224,21 +225,49 @@ li{
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        align-items: flex-start;
-        margin: 0;
+        
+        margin-right: 10px;
+        margin: 10px;
+        margin-left: 0;
+                overflow-x: hidden;
+
     }
     article, #orçamento, #cliente {
         width: 100%;
         border: 1px solid var(--border); /* No mobile a borda ajuda a separar */
-        margin-left: 0;
+        
     }
 
     #adicionar_div{
         display: flex;
         justify-content: space-evenly;
+        gap: 10px;
+        width: 100%;
+        justify-content: center;
     }
     #adicionar_input, #adicionar_button{
-        width: 100px;
+        width:auto;
     }
-    
+    #adicionar_cliente, #busca_cliente{
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 150px;
+        margin-bottom: 30px;
+    }
+
+    #cliente{
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+
+    }
+    .item_cliente{
+        display: flex;
+        flex-direction: row;
+    }
+    .p_cli{
+        margin: 0;
+    }
 }
